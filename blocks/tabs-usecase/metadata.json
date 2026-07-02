@@ -1,0 +1,38 @@
+{
+  "variantName": "tabs-usecase",
+  "baseBlock": "tabs",
+  "version": "1.0.0",
+  "created": "2026-07-01T17:42:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://mongodb.com/",
+    "originPage": "MongoDB homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "feature",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "tab label + heading + richtext + CTA + illustration",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "use-case / feature showcases with switchable panels",
+      "product capability explorers",
+      "grouping many related topics behind labeled tabs"
+    ],
+    "notSuitableFor": [
+      "content that must all be visible at once",
+      "expandable Q&A (use accordion)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-01T17:42:00.000Z"
+  }
+}

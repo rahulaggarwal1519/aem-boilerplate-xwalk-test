@@ -1,0 +1,237 @@
+/*
+ * columns-cta — MongoDB "Your AI Data Platform is Ready" CTA
+ * Left: dark rounded promo card with green CTA button + illustration.
+ * Right: clean resource-link list.
+ * Values extracted from mongodb.com .pf__section computed styles.
+ */
+
+/* The block sits in a section that globally renders dark; reset the block
+   area to the light source background so the left card reads as a dark inset.
+   `:where(.dark, .light)` keeps specificity low while still overriding the
+   global `main .section.dark` rules via the `.columns-cta-container` class. */
+main .section.columns-cta-container {
+  margin: 0;
+  padding: 40px 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+main .section.columns-cta-container :is(h1, h2, h3, h4, h5, h6) {
+  color: var(--text-color);
+}
+
+main .section.columns-cta-container a:any-link {
+  color: var(--text-color);
+}
+
+/* ---- layout: stacked on mobile, two panels on desktop ---- */
+.columns-cta > div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* ---- LEFT dark card ---- */
+.columns-cta > div > div:first-child {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 16px;
+  padding: 40px;
+  background-color: rgb(6 22 33);
+  color: #fff;
+}
+
+/* eyebrow "START HERE" — first paragraph, green accent + mono style */
+main .columns-cta > div > div:first-child > p:first-child {
+  margin: 0 0 24px;
+  border-left: 2px solid var(--brand-green);
+  padding-left: 12px;
+  color: var(--brand-green);
+  font-family: "Source Code Pro", sfmono-regular, consolas, monospace;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* title — second paragraph */
+main .columns-cta > div > div:first-child > p:nth-child(2) {
+  margin: 0 0 8px;
+  max-width: 14ch;
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+/* description — third paragraph */
+main .columns-cta > div > div:first-child > p:nth-child(3) {
+  margin: 16px 0 0;
+  max-width: 40ch;
+  color: rgb(184 196 194);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* CTA button paragraph */
+main .columns-cta > div > div:first-child > p:nth-child(4) {
+  margin: 32px 0 0;
+}
+
+/* illustration image — appears below text on mobile */
+main .columns-cta > div > div:first-child > p:last-child {
+  margin: 32px 0 0;
+}
+
+.columns-cta > div > div:first-child picture {
+  display: block;
+}
+
+.columns-cta > div > div:first-child img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ---- RIGHT resource-link panel ---- */
+.columns-cta > div > div:last-child {
+  border: 1px solid rgb(224 229 227);
+  border-radius: 16px;
+  padding: 40px;
+}
+
+/* eyebrow "MORE INFORMATION" */
+main .columns-cta > div > div:last-child > p:first-child {
+  margin: 0;
+  color: rgb(1 78 61);
+  font-family: "Source Code Pro", sfmono-regular, consolas, monospace;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* resource list */
+.columns-cta > div > div:last-child ul {
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.columns-cta > div > div:last-child li {
+  margin: 0;
+  border-bottom: 1px solid rgb(184 196 194);
+}
+
+/* green "Get Started" button (may or may not get auto-decorated as a.button) */
+main .section.columns-cta-container .columns-cta > div > div:first-child a:any-link,
+main .columns-cta a.button:any-link {
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  padding: 16px 48px;
+  background-color: var(--brand-green);
+  color: var(--brand-dark-green);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+main .section.columns-cta-container .columns-cta > div > div:first-child a:any-link:hover,
+main .columns-cta a.button:any-link:hover {
+  background-color: #00c957;
+  color: var(--brand-dark-green);
+  text-decoration: none;
+}
+
+/* resource link: bullet + label + chevron */
+/* stylelint-disable-next-line no-descending-specificity -- targets the right panel, no cascade conflict with the left-card button rules above */
+main .section.columns-cta-container .columns-cta > div > div:last-child li a:any-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 0;
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+main .section.columns-cta-container .columns-cta > div > div:last-child li a:any-link:hover {
+  color: var(--brand-dark-green);
+  text-decoration: none;
+}
+
+/* blue bullet on the left */
+.columns-cta > div > div:last-child li a::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--brand-blue);
+}
+
+/* green chevron on the right */
+.columns-cta > div > div:last-child li a::after {
+  content: "";
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  margin-left: auto;
+  background-color: var(--brand-green);
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center / contain;
+}
+
+/* ---- desktop: two panels side by side, left wider ---- */
+@media (width >= 900px) {
+  .columns-cta > div {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+  }
+
+  /* left card becomes a two-column: text + illustration */
+  .columns-cta > div > div:first-child {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 24px;
+    padding: 56px;
+  }
+
+  main .columns-cta > div > div:first-child > p:first-child,
+  main .columns-cta > div > div:first-child > p:nth-child(2),
+  main .columns-cta > div > div:first-child > p:nth-child(3),
+  main .columns-cta > div > div:first-child > p:nth-child(4) {
+    grid-column: 1;
+  }
+
+  main .columns-cta > div > div:first-child > p:nth-child(2) {
+    font-size: 36px;
+  }
+
+  /* illustration occupies the right half, spanning the text rows */
+  main .columns-cta > div > div:first-child > p:last-child {
+    grid-column: 2;
+    grid-row: 1 / -1;
+    align-self: center;
+    margin: 0;
+  }
+
+  .columns-cta > div > div:last-child {
+    padding: 56px;
+  }
+}

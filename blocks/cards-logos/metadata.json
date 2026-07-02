@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-logos",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-07-01T17:42:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://mongodb.com/",
+    "originPage": "MongoDB homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "logos",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "logo image only",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "customer / partner logo rows and grids",
+      "trust bars",
+      "integration / tech-stack logo walls"
+    ],
+    "notSuitableFor": [
+      "cards with title and body text (use cards-deploy)",
+      "photo-led editorial cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 2,
+    "lastUsed": "2026-07-01T17:42:00.000Z",
+    "note": "Reused within the same page for both the 'Loved by builders' customer logos and the 'Works seamlessly with your tech stack' partner logos."
+  }
+}

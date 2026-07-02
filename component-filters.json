@@ -19,9 +19,36 @@
     ]
   },
   {
+    "id": "cards-deploy",
+    "components": [
+      "cards-deploy-card"
+    ]
+  },
+  {
+    "id": "cards-logos",
+    "components": [
+      "cards-logos-card"
+    ]
+  },
+  {
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "columns-cta",
+    "components": [
+      "column"
+    ]
+  },
+  {
+    "id": "column",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title"
     ]
   },
   {
@@ -37,6 +64,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "tabs-usecase",
+    "components": [
+      "tabs-usecase-item"
     ]
   }
 ]

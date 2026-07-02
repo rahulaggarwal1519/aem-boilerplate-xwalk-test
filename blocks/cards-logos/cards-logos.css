@@ -1,0 +1,85 @@
+/* Block: cards-logos -- values from source .p13n-trust-logos computed styles */
+
+/* Source: https://mongodb.com/ trust-logos row on a light section background */
+
+.cards-logos > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px 50px; /* row 2x15px item margin, column 2x25px item margin */
+}
+
+.cards-logos > ul > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+  margin: 0;
+  flex: 0 0 auto;
+  min-height: 32px;
+}
+
+.cards-logos .cards-logos-card-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  line-height: 0;
+}
+
+.cards-logos > ul > li img {
+  object-fit: contain;
+  filter: grayscale(1); /* greyscale-ish look on light background */
+  opacity: 0.55; /* muted look from source (0.45 on dark; slightly higher on light) */
+  height: 32px;
+  width: auto;
+  max-width: 140px;
+  transition: opacity 0.2s ease, filter 0.2s ease;
+}
+
+.cards-logos > ul > li a:hover img {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+/* "Case Study" pill link -- adapted from source dark-bg pill to light section */
+.cards-logos .cards-logos-card-body {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.cards-logos .cards-logos-card-body a:any-link {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 10px 15px;
+  border-radius: 50px;
+  color: var(--text-color);
+  background: rgb(0 30 43 / 5%);
+  text-decoration: none;
+}
+
+.cards-logos .cards-logos-card-body a:any-link:hover {
+  background: rgb(0 30 43 / 10%);
+}
+
+@media (width >= 900px) {
+  .cards-logos > ul {
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .cards-logos > ul > li {
+    flex: 1 1 0;
+    min-width: 120px;
+    max-width: 170px;
+    height: 92px;
+    justify-content: flex-start;
+  }
+}

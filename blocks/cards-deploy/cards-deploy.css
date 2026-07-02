@@ -1,0 +1,118 @@
+/*
+ * cards-deploy — "Deploy Your Way" deployment cards
+ * White rounded cards on a dark green section background.
+ * Values extracted from mongodb.com computed styles.
+ */
+
+/* card grid: responsive row of cards, 24px gap */
+.cards-deploy > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (width >= 600px) {
+  .cards-deploy > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 900px) {
+  .cards-deploy > ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* white card box */
+.cards-deploy > ul > li {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid rgb(61 79 88);
+  border-radius: 48px;
+  box-shadow: rgb(0 30 43 / 12%) 0 26px 44px 0, rgb(0 0 0 / 13%) 0 7px 13px 0;
+  padding: 16px;
+  overflow: hidden;
+}
+
+/* the text content cell (block JS labels every non-image cell as card-body) */
+.cards-deploy .cards-deploy-card-body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* the empty image cell produced by the block JS — hide it */
+.cards-deploy .cards-deploy-card-image {
+  display: none;
+}
+
+/* hide the leading empty cell (block JS labels it card-body too) */
+.cards-deploy .cards-deploy-card-body:empty {
+  display: none;
+}
+
+/* title (override global .section.dark h2 white rule) */
+main .section.dark .cards-deploy .cards-deploy-card-body h2 {
+  margin: 24px 0 16px;
+  padding: 0 24px;
+  color: var(--brand-dark-green);
+  font-family: var(--body-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+/* description */
+.cards-deploy .cards-deploy-card-body p {
+  margin: 0 0 16px;
+  padding: 0 24px;
+  color: rgb(61 79 88);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* push the Learn More link to the bottom of the card */
+.cards-deploy .cards-deploy-card-body p:has(a) {
+  margin-top: auto;
+}
+
+/* Learn More — green text link with chevron, no button styling */
+.cards-deploy .cards-deploy-card-body p a {
+  display: inline-block;
+  margin: 24px 0 18px;
+  padding: 0 24px;
+  color: var(--brand-green);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px;
+  text-decoration: none;
+}
+
+.cards-deploy .cards-deploy-card-body p a::after {
+  content: "›";
+  margin-left: 8px;
+  font-weight: 600;
+}
+
+/* do not add a chevron to empty links */
+.cards-deploy .cards-deploy-card-body p a:empty::after {
+  content: none;
+}
+
+.cards-deploy .cards-deploy-card-body p a:hover {
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+/* hide the trailing empty link/paragraph EDS keeps from the source markup */
+.cards-deploy .cards-deploy-card-body p:has(> a:empty:only-child),
+.cards-deploy .cards-deploy-card-body p a:empty {
+  display: none;
+}

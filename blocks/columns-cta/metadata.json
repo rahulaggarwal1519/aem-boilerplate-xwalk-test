@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-cta",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-07-01T17:42:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://mongodb.com/",
+    "originPage": "MongoDB homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "wide",
+    "purpose": "cta",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "promo panel (title + image + CTA) beside supporting content / link list",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "side-by-side promo/CTA panels",
+      "featured stat/quote beside supporting copy",
+      "two-up content splits (media + text)"
+    ],
+    "notSuitableFor": [
+      "repeatable item grids (use cards)",
+      "single full-width hero (use hero)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 2,
+    "lastUsed": "2026-07-01T17:42:00.000Z",
+    "note": "Reused within the same page for the 'Loved by builders' featured stat panel and the final 'Your AI Data Platform is Ready' CTA."
+  }
+}

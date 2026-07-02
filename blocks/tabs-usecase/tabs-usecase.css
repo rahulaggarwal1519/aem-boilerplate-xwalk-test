@@ -1,0 +1,150 @@
+/*
+ * tabs-usecase — MongoDB homepage "use case" tabbed panel.
+ * Lives inside a section with style="dark" (dark green background, light text).
+ * Mobile-first: tabs stack above the panel; desktop: tabs on the left, panel on the right.
+ */
+
+.tabs-usecase {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 24px;
+  color: #fff;
+}
+
+/* ----- tab list ----- */
+.tabs-usecase .tabs-usecase-list {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.5ch;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.tabs-usecase .tabs-usecase-list button {
+  flex: 0 0 auto;
+  margin: 0;
+  border: 0;
+  border-left: 1px solid transparent;
+  border-radius: 0;
+  padding: 0 12px;
+  background-color: transparent;
+  color: rgb(184 196 194);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: left;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.tabs-usecase .tabs-usecase-list button p {
+  margin: 0;
+}
+
+.tabs-usecase .tabs-usecase-list button:hover {
+  color: #fff;
+}
+
+.tabs-usecase .tabs-usecase-list button[aria-selected='true'] {
+  border-left-color: var(--brand-blue);
+  color: #fff;
+  cursor: default;
+}
+
+/* ----- content panel ----- */
+.tabs-usecase .tabs-usecase-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0;
+  border: 0;
+  border-radius: 24px;
+  padding: 48px;
+  background-color: rgb(6 22 33);
+  color: #fff;
+  overflow: hidden;
+}
+
+.tabs-usecase .tabs-usecase-panel[aria-hidden='true'] {
+  display: none;
+}
+
+.tabs-usecase .tabs-usecase-panel h3 {
+  margin: 0;
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.tabs-usecase .tabs-usecase-panel > p {
+  margin: 0;
+  color: rgb(184 196 194);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* CTA links: first is a green pill button, second is a green text link */
+.tabs-usecase .tabs-usecase-panel > p:has(a) {
+  margin-top: 8px;
+}
+
+.tabs-usecase .tabs-usecase-panel a:any-link {
+  color: var(--brand-green);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.tabs-usecase .tabs-usecase-panel a.button:any-link {
+  display: inline-flex;
+  border: 1px solid #00684a;
+  border-radius: 4px;
+  padding: 16px 48px;
+  background-color: var(--brand-green);
+  color: var(--brand-dark-green);
+  font-weight: 500;
+}
+
+.tabs-usecase .tabs-usecase-panel a.button:any-link:hover {
+  border-color: #00684a;
+  background-color: #00c957;
+  color: var(--brand-dark-green);
+  text-decoration: none;
+}
+
+/* hide any empty trailing link paragraphs authored in the content */
+.tabs-usecase .tabs-usecase-panel p:empty,
+.tabs-usecase .tabs-usecase-panel p:has(> a:only-child:empty) {
+  display: none;
+}
+
+/* ----- desktop: tabs left, panel right ----- */
+@media (width >= 900px) {
+  .tabs-usecase {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .tabs-usecase .tabs-usecase-list {
+    flex: 0 0 216px;
+    flex-direction: column;
+    gap: 16px;
+    align-self: center;
+    overflow: visible;
+  }
+
+  .tabs-usecase .tabs-usecase-list button {
+    width: 100%;
+    padding: 0 0 0 18px;
+  }
+
+  .tabs-usecase .tabs-usecase-panel {
+    flex: 1 1 auto;
+    padding: 48px;
+  }
+}

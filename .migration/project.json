@@ -1,0 +1,11 @@
+{
+  "sites": {
+    "aem-boilerplate-xwalk-test": {
+      "previewOrg": "rahulaggarwal1519",
+      "previewSite": "aem-boilerplate-xwalk-test",
+      "contentHostUrl": "author-p130360-e1272151.adobeaemcloud.com",
+      "libraryUrl": "https://main--sta-xwalk-boilerplate--aemysites.aem.page/tools/sidekick/library.json"
+    }
+  },
+  "type": "xwalk"
+}

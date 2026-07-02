@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "projectType": "xwalk"
+  },
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://mongodb.com/"
+      ],
+      "representativeUrl": "https://mongodb.com/",
+      "description": "MongoDB homepage - hero, tabbed use cases, deployment cards, customer logos, tech stack logos, and final CTA",
+      "blocks": [
+        {
+          "name": "hero-platform",
+          "instances": [
+            ".p13n-hp-hero .hero-top-wrapper",
+            ".p13n-hp-hero"
+          ]
+        },
+        {
+          "name": "tabs-usecase",
+          "instances": [
+            ".vddp__experiment-wrapper",
+            ".vddp__experiment"
+          ]
+        },
+        {
+          "name": "cards-deploy",
+          "instances": [
+            ".bnr .bnr__inner",
+            ".exp-carousel .bnr"
+          ]
+        },
+        {
+          "name": "cards-logos",
+          "instances": [
+            ".p13n-trust-logos"
+          ]
+        },
+        {
+          "name": "columns-cta",
+          "instances": [
+            ".exp-pathfinder .pf__section",
+            ".exp-pathfinder"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1-hero",
+          "name": "Hero",
+          "selector": [
+            ".p13n-hp-hero",
+            ".relative.overflow-hidden"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-platform"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2-atlas-usecases",
+          "name": "MongoDB Atlas use cases",
+          "selector": [
+            ".vddp__top",
+            ".vddp__experiment-wrapper"
+          ],
+          "style": "dark",
+          "blocks": [
+            "tabs-usecase"
+          ],
+          "defaultContent": [
+            ".vddp__left-title"
+          ]
+        },
+        {
+          "id": "section-3-deploy",
+          "name": "Deploy Your Way",
+          "selector": [
+            ".exp-carousel",
+            ".bnr"
+          ],
+          "style": "dark",
+          "blocks": [
+            "cards-deploy"
+          ],
+          "defaultContent": [
+            ".bnr__title-gradient"
+          ]
+        },
+        {
+          "id": "section-4-loved",
+          "name": "Loved by builders, trusted by enterprises",
+          "selector": [
+            ".p13n-trust-logos"
+          ],
+          "style": "light",
+          "blocks": [
+            "cards-logos"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-5-techstack",
+          "name": "Works seamlessly with your tech stack",
+          "selector": [
+            ".animate-partner-carousel"
+          ],
+          "style": "light",
+          "blocks": [
+            "cards-logos"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-6-final-cta",
+          "name": "Your AI Data Platform is Ready",
+          "selector": [
+            ".exp-pathfinder",
+            ".pf__section"
+          ],
+          "style": "light",
+          "blocks": [
+            "columns-cta"
+          ],
+          "defaultContent": [
+            ".pf__title"
+          ]
+        }
+      ]
+    }
+  ]
+}

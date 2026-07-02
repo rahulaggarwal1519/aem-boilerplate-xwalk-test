@@ -1,0 +1,110 @@
+/* hero-platform — full-bleed dark hero, extracted from mongodb.com .p13n-hp-hero */
+
+/* full-bleed: override EDS section max-width/padding so the dark bg spans edge to edge */
+.hero-platform-container .hero-platform-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-platform {
+  box-sizing: border-box;
+  background-color: #061621; /* MongoDB hero dark */
+  color: #fff;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+/* content row + cell: centered column, constrained content width */
+.hero-platform > div {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-platform > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 760px;
+  width: 100%;
+}
+
+/* headline */
+.hero-platform h1 {
+  margin: 24px 0 0;
+  font-family: var(--heading-font-family);
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.14;
+  color: #fff;
+}
+
+/* description + generic paragraphs */
+.hero-platform p {
+  margin: 20px 0 0;
+  max-width: 620px;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff;
+}
+
+/* promo pill — first paragraph in the cell (contains "New" + link) */
+.hero-platform > div > div > p:first-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  width: auto;
+  max-width: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: rgb(255 255 255 / 4%);
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.hero-platform > div > div > p:first-child a:any-link {
+  color: #fff;
+  font-weight: 500;
+}
+
+/* CTA buttons (authored as buttons) */
+.hero-platform .button-container {
+  margin-top: 32px;
+}
+
+.hero-platform a.button:any-link {
+  padding: 15px 24px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.hero-platform a.button.primary:any-link {
+  border: 1px solid #001e2b;
+  background-color: var(--brand-green);
+  color: var(--brand-dark-green);
+}
+
+.hero-platform a.button.secondary:any-link {
+  border: 1px solid #e7eeec;
+  background-color: transparent;
+  color: #fff;
+}
+
+@media (width >= 900px) {
+  .hero-platform {
+    padding: 64px 32px;
+  }
+
+  .hero-platform h1 {
+    margin-top: 48px;
+    font-size: 56px;
+    line-height: 1.14;
+  }
+
+  .hero-platform p {
+    margin-top: 24px;
+  }
+}

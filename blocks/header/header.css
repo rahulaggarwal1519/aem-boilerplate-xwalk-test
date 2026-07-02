@@ -1,6 +1,7 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--background-color);
+  background-color: var(--brand-dark-green);
+  color: #fff;
   width: 100%;
   z-index: 2;
   position: fixed;
@@ -72,7 +73,7 @@ header nav .nav-hamburger button {
   border: 0;
   border-radius: 0;
   padding: 0;
-  background-color: var(--background-color);
+  background-color: transparent;
   color: inherit;
   overflow: initial;
   text-overflow: initial;
@@ -149,8 +150,9 @@ header .nav-brand {
 }
 
 header nav .nav-brand img {
-  width: 128px;
+  width: 140px;
   height: auto;
+  filter: brightness(0) invert(1);
 }
 
 /* sections */
@@ -270,3 +272,52 @@ header nav .nav-sections ul > li > ul > li {
 header nav .nav-tools {
   grid-area: tools;
 }
+
+/* MongoDB header theme */
+header nav a:hover {
+  color: var(--brand-green);
+  text-decoration: none;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+header nav .nav-tools ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: var(--body-font-size-s);
+}
+
+header nav .nav-tools a:any-link {
+  color: #fff;
+  white-space: nowrap;
+}
+
+header nav .nav-tools a.button:any-link {
+  background-color: var(--brand-green);
+  border-color: var(--brand-green);
+  color: var(--brand-dark-green);
+  padding: 0.5em 1.1em;
+  font-weight: 500;
+}
+
+header nav .nav-tools a.button:hover {
+  background-color: #00c957;
+  border-color: #00c957;
+  color: var(--brand-dark-green);
+}
+
+@media (width >= 900px) {
+  header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
+    background-color: var(--brand-dark-green);
+    border: 1px solid rgb(255 255 255 / 12%);
+    border-radius: 8px;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
+    border-bottom-color: var(--brand-dark-green);
+  }
+}
+

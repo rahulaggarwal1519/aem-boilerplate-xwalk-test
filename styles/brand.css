@@ -1,0 +1,38 @@
+/*
+ * brand.css — MongoDB brand design tokens
+ * Extracted from https://mongodb.com/
+ */
+
+:root {
+  /* fonts — MongoDB proprietary fonts with system fallbacks */
+  --heading-font-family: "MongoDB Value Serif", georgia, "Times New Roman", serif;
+  --body-font-family: "Euclid Circular A", "Helvetica Neue", helvetica, arial, sans-serif;
+
+  /* brand colors */
+  --brand-green: #00ed64;
+  --brand-dark-green: #001e2b;
+  --brand-evergreen: #023430;
+  --brand-blue: #016bf8;
+
+  /* core colors */
+  --background-color: #fff;
+  --text-color: #001e2b;
+  --link-color: #016bf8;
+  --link-hover-color: #0050c8;
+
+  /* light/dark section variants */
+  --light-color: #f9fbfa;
+  --dark-color: #001e2b;
+
+  /* spacing */
+  --section-padding: 64px;
+  --nav-height: 56px;
+
+  /* heading sizes (desktop) */
+  --heading-size-xxl: 56px;
+  --heading-size-xl: 40px;
+  --heading-size-l: 32px;
+  --heading-size-m: 24px;
+  --heading-size-s: 20px;
+  --heading-size-xs: 18px;
+}

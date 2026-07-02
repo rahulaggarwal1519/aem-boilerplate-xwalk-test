@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://mongodb.com/",
+  "path": "index",
+  "timestamp": "2026-07-01T18:18:11.995Z",
+  "title": "MongoDB: The World’s Leading Modern Data Platform | MongoDB",
+  "template": "homepage",
+  "blocks": [
+    "hero-platform",
+    "hero-platform",
+    "tabs-usecase",
+    "tabs-usecase",
+    "cards-deploy",
+    "cards-deploy",
+    "cards-logos",
+    "columns-cta",
+    "columns-cta"
+  ]
+}
